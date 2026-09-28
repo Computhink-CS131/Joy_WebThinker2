@@ -65,7 +65,7 @@ function draw () {
         textSize(48);
         text('Fruit Ninja ', width/2, height/2 - 40);
         text('Press SPACE or Click to start ', width/2, height/2 + 20);
-        backgroundTrack.stop
+        backgroundTrack.stop();
         return;
     }
 
