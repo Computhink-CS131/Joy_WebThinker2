@@ -92,6 +92,10 @@ function draw () {
         for (let i = 0; i < difficultyNumFruits; i++) {
             spawnFruit();
         }
+
+    if (gameTimer - lastDifficultyIncrease >= 15) {
+        
+    }
         
     }
     if (mouse.pressing()) {
