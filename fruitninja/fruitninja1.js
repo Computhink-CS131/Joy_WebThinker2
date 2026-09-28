@@ -53,7 +53,7 @@ function draw () {
         gameTimer = 0;
     
     if (!backgroundTrack.isPlaying()) {
-        
+        backgroundTrack.loop()
     }
 
     }
