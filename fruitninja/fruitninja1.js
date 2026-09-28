@@ -92,13 +92,9 @@ function draw () {
         for (let i = 0; i < difficultyNumFruits; i++) {
             spawnFruit();
         }
+    }
 
-    if (gameTimer - lastDifficultyIncrease >= 15) {
-        difficultyNumFruits += 1;
-        lastDifficultyIncrease = gameTimer;
-    }
-        
-    }
+    
     if (mouse.pressing()) {
         trail = new Sprite(mouse.x, mouse.y, 7);
         trail.collider = 'none';
