@@ -10,6 +10,7 @@ let gameTimer = 0;
 let gameDuration = 60;
 let sliceSound;
 let difficultyNumFruits = 0;
+let lastDifficulty
 
 function preload() {
     dojoBG = loadImage('assets/dojobackground.png');
