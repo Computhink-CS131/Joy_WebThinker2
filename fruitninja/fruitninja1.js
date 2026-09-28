@@ -9,7 +9,7 @@ let gameStartTime = 0;
 let gameTimer = 0;
 let gameDuration = 60;
 let sliceSound;
-let difficultyNumFruits = 0;
+let difficultyNumFruits = 1;
 let lastDifficultyIncrease = 0;
 
 function preload() {
