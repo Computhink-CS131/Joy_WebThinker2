@@ -140,6 +140,8 @@ function sliceFruit() {
 
             score += 1
 
+            sliceSound.play();
+
             break;
         }
     }
