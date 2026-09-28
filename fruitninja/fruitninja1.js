@@ -12,7 +12,7 @@ let sliceSound;
 
 function preload() {
     dojoBG = loadImage('assets/dojobackground.png');
-    sliceSound = loadSound('assets')
+    sliceSound = loadSound('assets/Fruit-ninja')
 
     let peach = {
         whole: loadImage('assets/peachwhole.png'),
