@@ -51,6 +51,8 @@ function draw () {
         fruitHalves.removeAll();
         gameStartTime = millis();
         gameTimer = 0;
+
+        
     }
     if (gameState === 'start') {
         fill(0, 180);
