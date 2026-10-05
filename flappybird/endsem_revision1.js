@@ -6,11 +6,13 @@ function preload() {
     birdy = loadImage("assets/bluebird-midflap.png")
     bg = loadImage("assets/background-night.png")
 }
- function setup () {
+
+function setup () {
     createCanvas(600, 400);
- }
- function draw () {
+}
+
+function draw () {
     if (mouse.presses()) {
         birdy.up
     }
- }
+}
