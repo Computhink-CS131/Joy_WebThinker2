@@ -29,4 +29,4 @@ function draw () {
 ///
 
 
-_____ = new Sprite ()
+_____ = new Sprite (x, y, size)
