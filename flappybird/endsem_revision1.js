@@ -11,7 +11,7 @@ function setup () {
     createCanvas(400, 600);
 
     birdysprite = new Sprite(200, 200, 40)
-    birdysprite.image
+    birdysprite.image 
 }
 
 function draw () {
