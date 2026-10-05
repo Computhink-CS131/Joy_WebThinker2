@@ -15,6 +15,9 @@ function setup () {
 }
 
 function draw () {
+
+    
+
     if (mouse.presses()) {
         //birdysprite.up
     }
