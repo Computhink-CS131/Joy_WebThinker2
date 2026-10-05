@@ -7,5 +7,5 @@ function preload() {
     bg = loadImage("assets/background-night.png")
 }
  function setup () {
-    
+    createCanvas.
  }
