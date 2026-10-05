@@ -1,7 +1,9 @@
 let birdy;
 let nightbg;
 
-function preload (){}
+function preload (){
+    
+}
 function setup () {
     createCanvas(600, 400)
 }
