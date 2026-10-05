@@ -4,4 +4,5 @@ let bg;
 
 function preload() {
     birdy = loadImage("")
+    bg = loadImage("")
 }
