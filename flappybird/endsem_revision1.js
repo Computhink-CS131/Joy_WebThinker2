@@ -24,3 +24,8 @@ function draw () {
         birdysprite.vel.y = - 5;
     }
 }
+
+
+///
+
+
