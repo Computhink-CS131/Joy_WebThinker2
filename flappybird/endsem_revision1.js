@@ -4,5 +4,5 @@ let bg;
 
 function preload() {
     birdy = loadImage("")
-    bg = loadImage("baclground")
+    bg = loadImage("assets/background-night.png")
 }
