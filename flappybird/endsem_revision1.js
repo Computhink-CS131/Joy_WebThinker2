@@ -12,7 +12,7 @@ function setup () {
 
     birdysprite = new Sprite(200, 200, 40)
     birdysprite.image = birdy
-    world.gravity
+    world.gravity = 10;
 }
 
 function draw () {
