@@ -2,5 +2,5 @@ let bird;
 let bg;
 
 function preload() {
-    b=load
+    bg = loadI
 }
