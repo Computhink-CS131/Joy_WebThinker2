@@ -13,6 +13,6 @@ function setup () {
 
 function draw () {
     if (mouse.presses()) {
-        birdy.up
+        birdysprite.up
     }
 }
