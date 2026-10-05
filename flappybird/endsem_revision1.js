@@ -3,6 +3,6 @@ let birdysprite;
 let bg;
 
 function preload() {
-    birdy = loadImage("assets/back")
+    birdy = loadImage("assets/")
     bg = loadImage("assets/background-night.png")
 }
