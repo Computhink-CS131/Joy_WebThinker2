@@ -14,8 +14,8 @@ let scoreDigits;
 let flapSound, pointSound, failSound;
 
 function preload() {
-    flapMidImg = loadImage('assets/yellowbird-midflap.png')
-    flapDownImg = loadImage('assets/yellowbird-downflap.png')
+    flapMidImg = loadImage('assets/bluebird-midflap.png')
+    flapDownImg = loadImage('assets/bird-downflap.png')
     flapUpImg = loadImage('assets/yellowbird-upflap.png')
     bg = loadImage('assets/background-day.png')
     base = loadImage('assets/base.png')
