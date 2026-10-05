@@ -10,5 +10,7 @@ function preload() {
     createCanvas(600, 400);
  }
  function draw () {
-    
+    if (mouse.presses) {
+
+    }
  }
