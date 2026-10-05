@@ -1,6 +1,6 @@
-let bird;
+let birdy;
 let bg;
 
 function preload() {
-    bg = loadImage("")
+    birdy = loadImage("")
 }
