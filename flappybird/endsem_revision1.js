@@ -12,12 +12,13 @@ function setup () {
 
     birdysprite = new Sprite(200, 200, 40)
     birdysprite.image = birdy
+    world.gravity
 }
 
 function draw () {
 
     image(bg, 0, 0, 400, 600);
-
+    
     if (mouse.presses()) {
         //birdysprite.up
     }
