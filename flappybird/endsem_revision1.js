@@ -10,7 +10,7 @@ function preload() {
 function setup () {
     createCanvas(600, 400);
 
-    new 
+    new SpeechRecognitionErrorEvent()
 }
 
 function draw () {
