@@ -11,6 +11,6 @@ function preload() {
  }
  function draw () {
     if (mouse.presses()) {
-        
+        birdy.up
     }
  }
