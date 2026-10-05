@@ -21,6 +21,6 @@ function draw () {
     
     if (mouse.presses()) {
         //birdysprite.up
-        birdysprite
+        birdysprite.vel.y = - 5;
     }
 }
