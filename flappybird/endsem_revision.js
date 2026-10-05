@@ -17,7 +17,7 @@ function preload() {
     flapMidImg = loadImage('assets/bluebird-midflap.png')
     flapDownImg = loadImage('assets/bluebird-downflap.png')
     flapUpImg = loadImage('assets/bluebird-upflap.png')
-    bg = loadImage('assets/background-day.png')
+    bg = loadImage('assets/background-night.png')
     base = loadImage('assets/base.png')
     pipe = loadImage('assets/pipe-green.png')
     gameoverImg = loadImage('assets/gameover.png')
