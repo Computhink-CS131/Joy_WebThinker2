@@ -30,4 +30,4 @@ function draw () {
 
 
 _____ = new Sprite (x, y, size)
-___ = load
+___ = loadImage("assets")
