@@ -31,3 +31,4 @@ function draw () {
 
 _____ = new Sprite (x, y, size)
 ___ = loadImage("assets/_____.png")
+___
