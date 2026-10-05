@@ -10,7 +10,7 @@ function preload() {
 function setup () {
     createCanvas(400, 600);
 
-    birdysprite = new Sprite(200, 200, 10000)
+    birdysprite = new Sprite(200, 200, 40)
 }
 
 function draw () {
