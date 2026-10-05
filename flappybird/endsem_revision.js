@@ -15,8 +15,8 @@ let flapSound, pointSound, failSound;
 
 function preload() {
     flapMidImg = loadImage('assets/bluebird-midflap.png')
-    flapDownImg = loadImage('assets/bird-downflap.png')
-    flapUpImg = loadImage('assets/yellowbird-upflap.png')
+    flapDownImg = loadImage('assets/bluebird-downflap.png')
+    flapUpImg = loadImage('assets/bluebird-upflap.png')
     bg = loadImage('assets/background-day.png')
     base = loadImage('assets/base.png')
     pipe = loadImage('assets/pipe-green.png')
