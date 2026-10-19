@@ -139,7 +139,7 @@ function draw () {
             lives -= 1;
         }
     }
-    if (lives )
+    if (lives === 0)
     text('Missed: ' + missedFruits, 200, 10);
 
     
