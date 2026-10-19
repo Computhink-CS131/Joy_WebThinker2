@@ -35,7 +35,7 @@ function preload() {
         half2: loadImage('assets/berry_half2.png')
     };
 
-        let watermelon = {
+    let watermelon = {
         whole: loadImage('assets/watermelonwhole.png'),
         half1: loadImage('assets/watermelonhalf.png'),
         half2: loadImage('assets/watermelonhalf.png')
