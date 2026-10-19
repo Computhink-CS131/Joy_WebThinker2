@@ -148,7 +148,7 @@ function draw () {
     
     text('Time: ' + (gameDuration - gameTimer), 400, 10);
 
-    text('Lives: ' + (lives))
+    text('Lives: ' + (lives), 400, )
 
     if (gameTimer >= gameDuration) {
         gameState = 'gameOver';
