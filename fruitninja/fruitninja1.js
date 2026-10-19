@@ -103,7 +103,7 @@ function draw () {
         fill(255);
         text('Score: ' + missedFruits, width/2, height/2 + 20);
         text('Missed Fruits: ' + missedFruits, width/2, height/2 + 50);
-        text('Lives: ' + lives)
+        text('Lives: ' + lives, width/2, height/2 + 80)
         text('Press SPACE or Click to restart ', width/2, height/2 + 80);
         backgroundTrack.stop();
         return;
