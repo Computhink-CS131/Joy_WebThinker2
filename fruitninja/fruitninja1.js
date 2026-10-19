@@ -49,8 +49,8 @@ function preload() {
     };
 
     let bomb = {
-        bomb: loadImage('assets/fruitninja_bomb.png')
-        
+        bomb: loadImage('assets/fruitninja_bomb.png'),
+        explode: 
     }
     fruitTypes = [peach, watermelon, berry, grape, melon];
 }
