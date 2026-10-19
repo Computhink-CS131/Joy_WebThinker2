@@ -12,8 +12,8 @@ let gameDuration = 60;
 let sliceSound;
 let difficultyNumFruits = 1;
 let lastDifficultyIncrease = 0;
-let bombGroup;
-let bomb = {};
+// let bombGroup;
+// let bomb = {};
 let bombImg;
 let bombGroup;
 
