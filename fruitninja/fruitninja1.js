@@ -14,7 +14,8 @@ let difficultyNumFruits = 1;
 let lastDifficultyIncrease = 0;
 let bombGroup;
 let bomb = {};
-let b
+let bombImg;
+let bombGroup;
 
 function preload() {
     dojoBG = loadImage('assets/dojobackground.png');
