@@ -12,10 +12,10 @@ let gameDuration = 60;
 let sliceSound;
 let difficultyNumFruits = 1;
 let lastDifficultyIncrease = 0;
-// let bombGroup;
-// let bomb = {};
-// let bombImg;
-// let bombGroup;
+let bombGroup;
+let bomb = {};
+let bombImg;
+let bombGroup;
 
 function preload() {
     dojoBG = loadImage('assets/dojobackground.png');
@@ -52,12 +52,9 @@ function preload() {
         half2: loadImage('assets/fruitninja_melon_half2.png')
     };
 
-    // bomb = {
-        // bombimg: loadImage('assets/fruitninja_bomb.png'),
-        // explode: loadImage('assets/fruitninja_bombExplosion.png')
-    // };
 
-    // bombImg = loadImage('assets/fruitninja_bomb.png')
+// 
+    bombImg = loadImage('assets/fruitninja_bomb.png')
 
 
     fruitTypes = [peach, watermelon, berry, grape, melon];
@@ -69,7 +66,7 @@ function setup () {
 
     fruitGroup = new Group();
     fruitHalves = new Group();
-    // bombGroup = new Group();
+    bombGroup = new Group();
 }
 
 function draw () {
@@ -129,6 +126,11 @@ function draw () {
             // spawnBomb();
         }
     }
+        if (frameCount % 140 === 0) {
+
+            spawnBomb();
+        }
+    
 
     if (gameTimer - lastDifficultyIncrease >= 15) {
         difficultyNumFruits += 1;
@@ -173,7 +175,9 @@ function draw () {
     }
 
     gameTimer = floor((millis() - gameStartTime) / 1000);
+
 }
+
 function spawnFruit () {
     let fruitData = random(fruitTypes);
     let randomX = random(300, 500);
@@ -224,11 +228,11 @@ function sliceFruit() {
         right.life = 30;
     }
 }
-// function spawnBomb() {
-//     let randomX = random(300, 500)
-//     let bomb = new bombGroup.Sprite(randomX, height + 20, 40);
-//     bomb.image = bomb.bombImg;
-//     bomb.vel.y = (-10, -14);
-//     bomb.vel.x = (-2, 2);
-//     bomb.friction = 0;
-// }
+function spawnBomb() {
+    let randomX = random(300, 500)
+    let bomb = new bombGroup.Sprite(randomX, height + 20, 40);
+    bomb.image = bomb.bombImg;
+    bomb.vel.y = (-10, -14);
+    bomb.vel.x = (-2, 2);
+    bomb.friction = 0;
+}
