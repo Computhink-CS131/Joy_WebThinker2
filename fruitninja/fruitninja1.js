@@ -52,12 +52,12 @@ function preload() {
         half2: loadImage('assets/fruitninja_melon_half2.png')
     };
 
-    bomb = {
-        bombimg: loadImage('assets/fruitninja_bomb.png'),
-        explode: loadImage('assets/fruitninja_bombExplosion.png')
-    };
+    // bomb = {
+        // bombimg: loadImage('assets/fruitninja_bomb.png'),
+        // explode: loadImage('assets/fruitninja_bombExplosion.png')
+    // };
 
-    bombImg = loadImage('assets/fruitninja_bomb.png')
+    // bombImg = loadImage('assets/fruitninja_bomb.png')
 
 
     fruitTypes = [peach, watermelon, berry, grape, melon];
