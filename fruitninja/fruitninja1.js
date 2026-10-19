@@ -102,8 +102,8 @@ function draw () {
         textSize(24);
         fill(255);
         text('Score: ' + missedFruits, width/2, height/2 + 20);
-        text('Missed Fruits: ' + missedFruits, width/2, height/2 + 40)
-        text('Press SPACE or Click to restart ', width/2, height/2 + 20);
+        text('Missed Fruits: ' + missedFruits, width/2, height/2 + 60)
+        text('Press SPACE or Click to restart ', width/2, height/2 + 80);
         backgroundTrack.stop();
         return;
     }
