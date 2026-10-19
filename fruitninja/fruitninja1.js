@@ -140,7 +140,8 @@ function draw () {
         }
     }
     if (lives === 0) {
-        
+        gameState = 'gameOver';
+        return;
     }
     text('Missed: ' + missedFruits, 200, 10);
 
