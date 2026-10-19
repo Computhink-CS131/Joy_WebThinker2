@@ -7,7 +7,7 @@ let missedFruits = 0;
 let gameState = 'start';
 let gameStartTime = 0;
 let gameTimer = 0;
-let lives = 5;
+let lives = 4;
 let gameDuration = 60;
 let sliceSound;
 let difficultyNumFruits = 1;
@@ -72,7 +72,7 @@ function draw () {
         fruitHalves.removeAll();
         gameStartTime = millis();
         gameTimer = 0;
-        lives = 5;
+        lives = 4;
         difficultyNumFruits = 1;
     
     if (!backgroundTrack.isPlaying()) {
