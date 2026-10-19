@@ -51,7 +51,7 @@ function preload() {
     };
 
     bomb = {
-        bomb: loadImage('assets/fruitninja_bomb.png'),
+        bombimg: loadImage('assets/fruitninja_bomb.png'),
         explode: loadImage('assets/fruitninja_bombExplosion.png')
     };
 
