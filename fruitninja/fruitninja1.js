@@ -50,7 +50,7 @@ function preload() {
         half2: loadImage('assets/fruitninja_melon_half2.png')
     };
 
-    bomb = {
+    let bomb = {
         bomb: loadImage('assets/fruitninja_bomb.png'),
         explode: loadImage('assets/fruitninja_bombExplosion.png')
     }
