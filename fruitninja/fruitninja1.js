@@ -13,7 +13,7 @@ let sliceSound;
 let difficultyNumFruits = 1;
 let lastDifficultyIncrease = 0;
 let bombGroup;
-let bomb;
+let bomb = {};
 
 function preload() {
     dojoBG = loadImage('assets/dojobackground.png');
@@ -50,7 +50,7 @@ function preload() {
         half2: loadImage('assets/fruitninja_melon_half2.png')
     };
 
-    let bomb = {
+    bomb = {
         bomb: loadImage('assets/fruitninja_bomb.png'),
         explode: loadImage('assets/fruitninja_bombExplosion.png')
     }
