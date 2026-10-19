@@ -31,12 +31,12 @@ function preload() {
 
     let berry = {
         whole: loadImage('assets/fruitninja_berry.png'),
-        half1: loadImage('assets/berry_half1.png'),
-        half2: loadImage('assets/berry_half2.png')
+        half1: loadImage('assets/fruitninja_berry_half1.png'),
+        half2: loadImage('assets/fruitninja_berry_half2.png')
     };
 
     let grape = {
-        whole: loadImage('assets/grape.png'),
+        whole: loadImage('assets/fruitninja_grape.png'),
         half1: loadImage('assets/grape_half1.png'),
         half2: loadImage('assets/grape_half2.png')
     };
