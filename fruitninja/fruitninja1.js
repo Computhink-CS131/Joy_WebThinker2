@@ -104,8 +104,8 @@ function draw () {
         text('Score: ' + missedFruits, width/2, height/2 + 20);
         text('Missed Fruits: ' + missedFruits, width/2, height/2 + 50);
         text('Lives: ' + lives, width/2, height/2 + 80)
-        text('', width/2, height/2 + 110)
-        text('Press SPACE or Click to restart ', width/2, height/2 + 110);
+        text('', width/2, height/2 + 110);
+        text('Press SPACE or Click to restart ', width/2, height/2 + 140);
         backgroundTrack.stop();
         return;
     }
