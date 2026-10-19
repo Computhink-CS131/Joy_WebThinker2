@@ -209,3 +209,6 @@ function sliceFruit() {
         right.life = 30;
     }
 }
+function bomb() {
+    
+}
