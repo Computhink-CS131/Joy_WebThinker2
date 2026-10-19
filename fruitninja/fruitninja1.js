@@ -136,6 +136,7 @@ function draw () {
         if (fruit.y > height + 50) {
             fruit.remove()
             missedFruits += 1
+            lives -= 1
         }
     }
     text('Missed: ' + missedFruits, 200, 10);
