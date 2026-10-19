@@ -7,6 +7,7 @@ let missedFruits = 0;
 let gameState = 'start';
 let gameStartTime = 0;
 let gameTimer = 0;
+let lives = 3;
 let gameDuration = 60;
 let sliceSound;
 let difficultyNumFruits = 1;
