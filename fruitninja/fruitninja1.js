@@ -222,7 +222,7 @@ function sliceFruit() {
 function spawnBomb() {
     let randomX = random(300, 500)
     let bomb = new bombGroup.Sprite(randomX, height + 20, 40);
-    bomb.image = bomb.bomb;
+    bomb.image = bomb.bombimg;
     bomb.vel.y = (-10, -14);
     bomb.vel.x = (-2, 2);
     bomb.friction = 0;
