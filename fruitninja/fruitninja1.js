@@ -49,7 +49,7 @@ function preload() {
     };
 
     let bomb = {
-        wholebomb: loadImage('assets/fruitninja_bomb.png')
+        bomb: loadImage('assets/fruitninja_bomb.png')
         
     }
     fruitTypes = [peach, watermelon, berry, grape, melon];
