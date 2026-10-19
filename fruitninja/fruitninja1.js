@@ -49,7 +49,7 @@ function preload() {
     };
 
     let bomb = {
-        
+        wholebomb: loadImage('')
     }
     fruitTypes = [peach, watermelon, berry, grape, melon];
 }
