@@ -69,7 +69,7 @@ function setup () {
 
     fruitGroup = new Group();
     fruitHalves = new Group();
-    bombGroup = new Group();
+    // bombGroup = new Group();
 }
 
 function draw () {
@@ -126,7 +126,7 @@ function draw () {
     if (frameCount % 120 === 0) {
         for (let i = 0; i < difficultyNumFruits; i++) {
             spawnFruit();
-            spawnBomb();
+            // spawnBomb();
         }
     }
 
