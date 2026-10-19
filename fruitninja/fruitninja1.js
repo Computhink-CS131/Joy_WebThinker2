@@ -47,7 +47,7 @@ function preload() {
         half2: loadImage('assets/melon_half2.png')
     };
 
-    fruitTypes = [peach, watermelon];
+    fruitTypes = [peach, watermelon, berry, grape, melon];
 }
 
 function setup () {
