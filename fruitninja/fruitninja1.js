@@ -30,7 +30,7 @@ function preload() {
     };
 
     let berry = {
-        whole: loadImage('assets/berry.png'),
+        whole: loadImage('assets/fruitninja_berry.png'),
         half1: loadImage('assets/berry_half1.png'),
         half2: loadImage('assets/berry_half2.png')
     };
