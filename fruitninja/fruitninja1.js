@@ -224,11 +224,11 @@ function sliceFruit() {
         right.life = 30;
     }
 }
-function spawnBomb() {
-    let randomX = random(300, 500)
-    let bomb = new bombGroup.Sprite(randomX, height + 20, 40);
-    bomb.image = bomb.bombImg;
-    bomb.vel.y = (-10, -14);
-    bomb.vel.x = (-2, 2);
-    bomb.friction = 0;
-}
+// function spawnBomb() {
+//     let randomX = random(300, 500)
+//     let bomb = new bombGroup.Sprite(randomX, height + 20, 40);
+//     bomb.image = bomb.bombImg;
+//     bomb.vel.y = (-10, -14);
+//     bomb.vel.x = (-2, 2);
+//     bomb.friction = 0;
+// }
