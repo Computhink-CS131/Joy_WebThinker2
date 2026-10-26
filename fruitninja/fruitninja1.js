@@ -250,6 +250,8 @@ function sliceBomb() {
             const by = bomb.y;
             bomb.remove();
             bombExplosionSound.play()
+
+            let explosion = new Sprite(bx, )
         }
     }
 }
