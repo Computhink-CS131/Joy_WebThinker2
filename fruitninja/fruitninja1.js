@@ -247,7 +247,9 @@ function sliceBomb() {
             bomb.sliced = true;
 
             const bx = bomb.x;
-            const by = bomb.y
+            const by = bomb.y;
+            bomb.remove();
+            
         }
     }
 }
