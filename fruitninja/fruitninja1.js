@@ -15,7 +15,7 @@ let lastDifficultyIncrease = 0;
 let bombGroup;
 let bomb = {};
 let bombImg;
-let bombexplosionImg;
+let bombExplosionImg;
 let bombExplosionSound;
 
 function preload() {
@@ -56,8 +56,9 @@ function preload() {
 
 // 
     bombImg = loadImage('assets/fruitninja_bomb.png')
-    bombexplosionImg = loadImage('assets/fruitninja_bombExplosion.png')
+    bombExplosionImg = loadImage('assets/fruitninja_bombExplosion.png')
     
+
 
 
     fruitTypes = [peach, watermelon, berry, grape, melon];
