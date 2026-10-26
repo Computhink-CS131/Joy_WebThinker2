@@ -222,6 +222,8 @@ function sliceFruit() {
 
             sliceSound.play();
 
+            if (fruit.type.)
+
             break;
         }
     }
