@@ -71,7 +71,8 @@ function setup () {
     fruitGroup = new Group();
     fruitHalves = new Group();
     bombGroup = new Group();
-    backgroundTrack.s
+    backgroundTrack.setVolume(0.4)
+    
 }
 
 function draw () {
