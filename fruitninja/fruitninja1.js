@@ -252,7 +252,8 @@ function sliceBomb() {
             bombExplosionSound.play()
 
             let explosion = new Sprite(bx, by, 60);
-            explosion.img = 
+            explosion.img = bombExplosionImg;
+            explosion
         }
     }
 }
