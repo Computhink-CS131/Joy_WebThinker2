@@ -224,6 +224,8 @@ function sliceFruit() {
 
             if (fruit.type.effect !== "addtime") {
                 score += 1                
+            }else{
+                let star = new Sprite
             }
 
             break;
