@@ -222,7 +222,7 @@ function sliceFruit() {
 
             sliceSound.play();
 
-            if (fruit.type.effec)
+            if (fruit.type.effect !== "addtime")
 
             break;
         }
