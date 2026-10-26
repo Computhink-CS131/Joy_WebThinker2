@@ -228,6 +228,7 @@ function sliceFruit() {
                 let star = new Sprite(fx, fy, 80);
                 star.img = fruit.type.splash;
                 star.collider = "kinematic"
+                star.life = 10;
             }
 
             break;
