@@ -253,7 +253,8 @@ function sliceBomb() {
 
             let explosion = new Sprite(bx, by, 60);
             explosion.img = bombExplosionImg;
-            explosion
+            explosion.collider = "kinematic"
+            
         }
     }
 }
