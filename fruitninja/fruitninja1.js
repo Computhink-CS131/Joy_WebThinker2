@@ -56,7 +56,7 @@ function preload() {
 
 // 
     bombImg = loadImage('assets/fruitninja_bomb.png')
-    bombexplosionImg = loadImage('assets/')
+    bombexplosionImg = loadImage('assets/fruitninja_')
 
 
     fruitTypes = [peach, watermelon, berry, grape, melon];
