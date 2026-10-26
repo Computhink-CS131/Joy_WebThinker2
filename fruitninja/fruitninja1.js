@@ -249,7 +249,7 @@ function sliceBomb() {
             const bx = bomb.x;
             const by = bomb.y;
             bomb.remove();
-            
+            bombExplosionSound.play()
         }
     }
 }
