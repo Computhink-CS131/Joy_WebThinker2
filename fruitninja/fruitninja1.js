@@ -57,7 +57,7 @@ function preload() {
 // 
     bombImg = loadImage('assets/fruitninja_bomb.png')
     bombExplosionImg = loadImage('assets/fruitninja_bombExplosion.png')
-    bombExplosionSound = loadImage('assets/fruitninja_explosion')
+    bombExplosionSound = loadImage('assets/fruitninja_explosion.mp3')
 
 
 
