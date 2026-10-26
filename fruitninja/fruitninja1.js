@@ -218,12 +218,12 @@ function sliceFruit() {
 
             splitFruit(fx, fy, fruit.type);
 
-            score += 1
+
 
             sliceSound.play();
 
             if (fruit.type.effect !== "addtime") {
-                let 
+                
             }
 
             break;
