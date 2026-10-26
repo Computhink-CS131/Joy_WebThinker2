@@ -13,7 +13,7 @@ let sliceSound;
 let difficultyNumFruits = 1;
 let lastDifficultyIncrease = 0;
 let bombGroup;
-let bomb = {};
+let bomb;
 let bombImg;
 let bombExplosionImg;
 let bombExplosionSound;
