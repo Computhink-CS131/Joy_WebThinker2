@@ -254,7 +254,8 @@ function sliceBomb() {
             let explosion = new Sprite(bx, by, 60);
             explosion.img = bombExplosionImg;
             explosion.collider = "kinematic"
-            
+            explosion.life = 10;
+            li
         }
     }
 }
