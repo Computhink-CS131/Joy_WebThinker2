@@ -255,7 +255,8 @@ function sliceBomb() {
             explosion.img = bombExplosionImg;
             explosion.collider = "kinematic"
             explosion.life = 10;
-            li
+            lives -= 1;
+            break;
         }
     }
 }
