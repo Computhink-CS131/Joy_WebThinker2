@@ -72,7 +72,7 @@ function setup () {
     fruitHalves = new Group();
     bombGroup = new Group();
     backgroundTrack.setVolume(0.4)
-    
+    bombExplosionSound.setVolume
 }
 
 function draw () {
