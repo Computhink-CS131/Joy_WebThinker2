@@ -243,6 +243,8 @@ function spawnBomb() {
 function sliceBomb() {
     for (let bomb of bombGroup) {
         let d = dist(mouse.x, mouse.y, bomb.x, bomb.y);
-        if (d < ((bomb.d / 2) + 5))
+        if (d < ((bomb.d / 2) + 5)) {
+            bomb.sliced = true;
+        }
     }
 }
