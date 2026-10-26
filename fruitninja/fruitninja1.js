@@ -15,6 +15,7 @@ let lastDifficultyIncrease = 0;
 let bombGroup;
 let bomb = {};
 let bombImg;
+let bomb
 
 function preload() {
     dojoBG = loadImage('assets/dojobackground.png');
