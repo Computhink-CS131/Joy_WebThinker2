@@ -226,7 +226,8 @@ function sliceFruit() {
                 score += 1                
             }else{
                 let star = new Sprite(fx, fy, 80);
-                star.img = fruit.type.splash
+                star.img = fruit.type.splash;
+                star.collider = "kinematic"
             }
 
             break;
