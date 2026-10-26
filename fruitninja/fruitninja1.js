@@ -246,7 +246,8 @@ function sliceBomb() {
         if (d < ((bomb.d / 2) + 5)) {
             bomb.sliced = true;
 
-            const bx = bomb.x
+            const bx = bomb.x;
+            const by = bomb.y
         }
     }
 }
