@@ -53,7 +53,8 @@ function preload() {
         half2: loadImage('assets/fruitninja_melon_half2.png')
     };
     let timeFruit = {
-        whole: loadImage('assets/fruitninja_clock.png')
+        whole: loadImage('assets/fruitninja_clock.png'),
+        half1: loadImage('assets/fruitninja_clockHalf1.png'),
         
     }
 
