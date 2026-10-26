@@ -229,6 +229,8 @@ function sliceFruit() {
                 star.img = fruit.type.splash;
                 star.collider = "kinematic"
                 star.life = 10;
+
+                gameDuration += 2;
             }
 
             break;
