@@ -240,3 +240,6 @@ function spawnBomb() {
     bomb.vel.x = (-2, 2);
     bomb.friction = 0;
 }
+function sliceomb() {
+    
+}
