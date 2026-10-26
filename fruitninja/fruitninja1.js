@@ -67,7 +67,7 @@ function preload() {
 
 
 
-    fruitTypes = [peach, watermelon, berry, grape, melon];
+    fruitTypes = [peach, watermelon, berry, grape, melon, timeFruit];
 }
 
 function setup () {
