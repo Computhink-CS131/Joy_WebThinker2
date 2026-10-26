@@ -223,7 +223,7 @@ function sliceFruit() {
             sliceSound.play();
 
             if (fruit.type.effect !== "addtime") {
-                
+                score += 1                
             }
 
             break;
