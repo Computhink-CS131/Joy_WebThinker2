@@ -19,7 +19,7 @@ let obstacleTimer = 1;
 let enemyTimer = 2.2;
 let shotCooldown = 0;
 let backgroundOffset = 0;
-let lastFrameTime = 0;
+let defeatedEnemies = 0;
 
 function setup() {
   const gameCanvas = new Canvas(GAME_WIDTH, GAME_HEIGHT);
@@ -95,7 +95,6 @@ function draw() {
   drawHud();
 
   if (gameState !== 'playing') drawStateOverlay();
-  lastFrameTime = millis();
 }
 
 function drawWorld() {
@@ -187,10 +186,8 @@ function updateGame(deltaSeconds) {
   moveSprites(projectileSprites, -620, deltaSeconds);
   checkHits();
 
-  const defeatedCount = enemySprites.filter(sprite => sprite.gameDefeated).length;
-  currentScore = Math.floor(elapsedTime * 24 + defeatedCount * 35);
+  currentScore = Math.floor(elapsedTime * 24 + defeatedEnemies * 35);
   if (currentScore >= TARGET_SCORE) endGame('won');
-  if (millis() > 0) lastFrameTime = millis();
 }
 
 function moveSprites(sprites, speed, deltaSeconds) {
@@ -208,7 +205,7 @@ function spawnObstacle() {
   const kind = random() < 0.55 ? 'barrier' : 'drone';
   const obstacle = kind === 'barrier'
     ? createGameSprite(GAME_WIDTH + 40, GROUND_Y - 23, 42, 46)
-    : createGameSprite(GAME_WIDTH + 40, GROUND_Y - 98, 58, 32);
+    : createGameSprite(GAME_WIDTH + 40, GROUND_Y - 68, 58, 32);
   obstacle.gameKind = kind;
   obstacleSprites.push(obstacle);
 }
@@ -255,6 +252,7 @@ function startGame() {
   obstacleTimer = 1;
   enemyTimer = 2.2;
   shotCooldown = 0;
+  defeatedEnemies = 0;
   runnerSprite.x = 150;
   runnerSprite.y = GROUND_Y - runnerSprite.height / 2;
   runnerSprite.gameVerticalSpeed = 0;
@@ -315,6 +313,7 @@ function checkHits() {
       }, enemyBounds)) {
         enemy.gameDefeated = true;
         projectile.gameDefeated = true;
+        defeatedEnemies++;
         break;
       }
     }
