@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101619">
+  <title>Neon Runner</title>
+  <link rel="stylesheet" href="AIgame.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="home-link" href="index.html" aria-label="Back to game hub">← <span>ARCADE</span></a>
+      <div class="wordmark"><span class="wordmark-mark">N</span> NEON RUNNER</div>
+      <div class="status"><span class="status-light"></span> SYSTEM ONLINE</div>
+    </header>
+
+    <section class="game-section" aria-label="Neon Runner game">
+      <div class="game-heading">
+        <div>
+          <p class="eyebrow">SECTOR 09 <span>·</span> NIGHT SHIFT</p>
+          <h1>Outrun the <em>overload.</em></h1>
+        </div>
+        <div class="scoreboard" aria-live="polite">
+          <div class="score-cell"><span>DISTANCE</span><strong id="score">00000</strong></div>
+          <div class="score-cell best-cell"><span>BEST</span><strong id="best">00000</strong></div>
+        </div>
+      </div>
+
+      <div class="screen-frame">
+        <canvas id="game" width="960" height="540" tabindex="0" aria-label="A robot runs through a futuristic city. Press Space or Up to jump and Down to slide."></canvas>
+        <div class="screen-stamp">LIVE FEED <span></span></div>
+      </div>
+
+      <div class="game-bar">
+        <div class="instructions">
+          <span class="key">SPACE</span><span class="key">↑</span><span class="instruction-copy">JUMP</span>
+          <span class="key down-key">↓</span><span class="instruction-copy">SLIDE</span>
+        </div>
+        <div class="game-actions">
+          <span id="game-message" class="game-message">READY WHEN YOU ARE</span>
+          <button id="pause-button" class="icon-button" type="button" aria-label="Pause game" title="Pause game" disabled>Ⅱ</button>
+          <button id="start-button" class="start-button" type="button">START RUN <span>↗</span></button>
+        </div>
+      </div>
+      <p class="mobile-hint">Tap to jump · Hold low on the screen to slide</p>
+    </section>
+
+    <footer class="footer"><span>ROBOT UNIT R-07</span><span>KEEP MOVING. STAY CHARGED.</span><span>© 2089 NEO CITY</span></footer>
+  </main>
+  <script src="AIgame.js"></script>
+</body>
+</html>
