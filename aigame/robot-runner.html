@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08121f">
+  <title>Robot Runner — Neon City</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      background: #08121f;
+      color: #eaf5ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 50% 0, #183354 0, transparent 55%),
+        #08121f;
+    }
+
+    main { width: min(100%, 980px); }
+
+    .topbar, .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .topbar { margin-bottom: 12px; }
+    .bottom-bar { margin-top: 12px; color: #9cb2c5; font-size: 13px; }
+
+    a { color: #71f6dc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    h1 {
+      margin: 0;
+      color: #71f6dc;
+      font-size: clamp(20px, 4vw, 30px);
+      letter-spacing: .12em;
+    }
+
+    .game-frame {
+      overflow: hidden;
+      border: 1px solid #2e5672;
+      border-radius: 12px;
+      box-shadow: 0 20px 70px #0008, 0 0 30px #42c8e522;
+    }
+
+    canvas {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      touch-action: manipulation;
+    }
+
+    .touch-controls { display: none; gap: 10px; }
+    .touch-controls button {
+      flex: 1;
+      min-height: 48px;
+      border: 1px solid #2e7186;
+      border-radius: 8px;
+      background: #102539;
+      color: #71f6dc;
+      font: inherit;
+      font-weight: 700;
+      touch-action: none;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 12px; }
+      .bottom-bar { align-items: flex-start; flex-direction: column; font-size: 12px; }
+      .touch-controls { display: flex; margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <a href="../index.html">← Game hub</a>
+      <h1>ROBOT RUNNER</h1>
+      <span aria-hidden="true">◆</span>
+    </header>
+
+    <div class="game-frame" id="game-frame" aria-label="Robot Runner game">
+      <div id="game-container"></div>
+    </div>
+
+    <div class="touch-controls" aria-label="Touch controls">
+      <button id="jump-button" type="button">JUMP</button>
+      <button id="shoot-button" type="button">SHOOT</button>
+    </div>
+
+    <footer class="bottom-bar">
+      <span>← / → move · ↑ jump · ↓ slide · SPACE shoot</span>
+      <span>Reach 1,000 points to win · ESC pauses</span>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5play/3.26.5/planck.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5play/3.26.5/p5play.js"></script>
+  <script src="robot-runner.js"></script>
+</body>
+</html>
