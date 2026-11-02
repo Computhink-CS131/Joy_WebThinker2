@@ -34,7 +34,7 @@ Build the game based on these details:
 
 Genre: running game
 
-Theme: _____  
+Theme: future
 
 Mechanics: _____  
 
