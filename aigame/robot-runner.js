@@ -149,7 +149,7 @@ function drawWorld() {
 
 function updateGame(deltaSeconds) {
   elapsedTime += deltaSeconds;
-  worldSpeed = Math.min(560, 300 + elapsedTime * 5);
+  worldSpeed = Math.min(700, 330 + elapsedTime * 9);
   runnerSprite.gameRunPhase += deltaSeconds * (worldSpeed / 56);
   runnerSprite.gameInvulnerable = Math.max(0, runnerSprite.gameInvulnerable - deltaSeconds);
 
@@ -174,15 +174,15 @@ function updateGame(deltaSeconds) {
   shotCooldown = Math.max(0, shotCooldown - deltaSeconds);
   if (obstacleTimer <= 0) {
     spawnObstacle();
-    obstacleTimer = max(0.9, random(1.3, 1.95) - elapsedTime * 0.006);
+    obstacleTimer = max(0.72, random(1.15, 1.7) - elapsedTime * 0.008);
   }
   if (enemyTimer <= 0) {
     spawnEnemy();
-    enemyTimer = random(2.4, 3.6);
+    enemyTimer = max(1.5, random(2.2, 3) - elapsedTime * 0.01);
   }
 
   moveSprites(obstacleSprites, -worldSpeed, deltaSeconds);
-  moveSprites(enemySprites, -worldSpeed * 0.82, deltaSeconds);
+  moveSprites(enemySprites, -worldSpeed * 0.9, deltaSeconds);
   moveSprites(projectileSprites, 680, deltaSeconds);
   checkHits();
 
@@ -236,7 +236,7 @@ function fireProjectile() {
   let verticalSpeed = 0;
 
   if (target) {
-    const interceptTime = (target.x - shotX) / (680 + worldSpeed * 0.82);
+    const interceptTime = (target.x - shotX) / (680 + worldSpeed * 0.9);
     const targetVerticalSpeed = cos(target.gameHoverPhase) * 36;
     const predictedTargetY = target.y + targetVerticalSpeed * interceptTime;
     verticalSpeed = (predictedTargetY - shotY) / interceptTime;
