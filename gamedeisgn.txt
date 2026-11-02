@@ -40,7 +40,7 @@ Mechanics: robot will run and defeat enemies, jump over obstacles
 
 Objectives: survive enemies and obstacles as long as possible (try and get highest score)
 
-Controls: arrow keys to move, up to jump, spacebar to 
+Controls: arrow keys to move, up to jump, spacebar to shoot enemies
 
 Game inspiration: google dino game
 
