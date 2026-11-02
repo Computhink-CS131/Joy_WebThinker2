@@ -205,7 +205,7 @@ function spawnObstacle() {
   const kind = random() < 0.55 ? 'barrier' : 'drone';
   const obstacle = kind === 'barrier'
     ? createGameSprite(GAME_WIDTH + 40, GROUND_Y - 23, 42, 46)
-    : createGameSprite(GAME_WIDTH + 40, GROUND_Y - 68, 58, 32);
+    : createGameSprite(GAME_WIDTH + 40, GROUND_Y - 64, 58, 32);
   obstacle.gameKind = kind;
   obstacleSprites.push(obstacle);
 }
