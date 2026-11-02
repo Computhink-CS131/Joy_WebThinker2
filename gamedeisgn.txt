@@ -36,7 +36,7 @@ Genre: running game
 
 Theme: future
 
-Mechanics: _____  
+Mechanics: robot will run and defeat  
 
 Objectives: _____  
 
