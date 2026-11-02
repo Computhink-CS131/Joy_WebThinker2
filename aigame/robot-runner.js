@@ -181,9 +181,9 @@ function updateGame(deltaSeconds) {
     enemyTimer = random(2.4, 3.6);
   }
 
-  moveSprites(obstacleSprites, worldSpeed, deltaSeconds);
-  moveSprites(enemySprites, worldSpeed * 0.82, deltaSeconds);
-  moveSprites(projectileSprites, -620, deltaSeconds);
+  moveSprites(obstacleSprites, -worldSpeed, deltaSeconds);
+  moveSprites(enemySprites, -worldSpeed * 0.82, deltaSeconds);
+  moveSprites(projectileSprites, 680, deltaSeconds);
   checkHits();
 
   currentScore = Math.floor(elapsedTime * 24 + defeatedEnemies * 35);
@@ -192,10 +192,12 @@ function updateGame(deltaSeconds) {
 
 function moveSprites(sprites, speed, deltaSeconds) {
   for (const sprite of sprites) {
-    sprite.x -= speed * deltaSeconds;
+    sprite.x += speed * deltaSeconds;
     if (sprite.gameKind === 'enemy') {
       sprite.gameHoverPhase += deltaSeconds * 3;
       sprite.y = sprite.gameBaseY + sin(sprite.gameHoverPhase) * 12;
+    } else if (sprite.gameKind === 'projectile') {
+      sprite.y += sprite.gameVelocityY * deltaSeconds;
     }
   }
   removeOffscreen(sprites);
@@ -226,8 +228,23 @@ function fireProjectile() {
   }
   if (gameState !== 'playing' || shotCooldown > 0) return;
 
-  const projectile = createGameSprite(runnerSprite.x + 34, runnerSprite.y - 6, 22, 8);
+  const shotX = runnerSprite.x + 34;
+  const shotY = runnerSprite.y - 24;
+  const target = enemySprites
+    .filter(enemy => !enemy.gameDefeated && enemy.x > shotX)
+    .sort((first, second) => first.x - second.x)[0];
+  let verticalSpeed = 0;
+
+  if (target) {
+    const interceptTime = (target.x - shotX) / (680 + worldSpeed * 0.82);
+    const targetVerticalSpeed = cos(target.gameHoverPhase) * 36;
+    const predictedTargetY = target.y + targetVerticalSpeed * interceptTime;
+    verticalSpeed = (predictedTargetY - shotY) / interceptTime;
+  }
+
+  const projectile = createGameSprite(shotX, shotY, 22, 8);
   projectile.gameKind = 'projectile';
+  projectile.gameVelocityY = verticalSpeed;
   projectileSprites.push(projectile);
   shotCooldown = 0.3;
 }
@@ -268,7 +285,10 @@ function clearSprites(sprites) {
 
 function removeOffscreen(sprites) {
   for (let index = sprites.length - 1; index >= 0; index--) {
-    if (sprites[index].x < -70 || sprites[index].gameDefeated) {
+    const offscreen = sprites[index].gameKind === 'projectile'
+      ? sprites[index].x > GAME_WIDTH + 70
+      : sprites[index].x < -70;
+    if (offscreen || sprites[index].gameDefeated) {
       sprites[index].remove();
       sprites.splice(index, 1);
     }
