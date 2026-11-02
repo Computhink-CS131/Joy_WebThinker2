@@ -38,7 +38,7 @@ Theme: future
 
 Mechanics: robot will run and defeat enemies, jump over obstacles 
 
-Objectives: survive enemies and obstacles as long as possible (try and get high)
+Objectives: survive enemies and obstacles as long as possible (try and get highest score)
 
 Controls: _____  
 
