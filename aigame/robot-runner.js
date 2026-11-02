@@ -197,6 +197,9 @@ function moveSprites(sprites, speed, deltaSeconds) {
       sprite.gameHoverPhase += deltaSeconds * 3;
       sprite.y = sprite.gameBaseY + sin(sprite.gameHoverPhase) * 12;
     } else if (sprite.gameKind === 'projectile') {
+      if (sprite.gameTarget && !sprite.gameTarget.gameDefeated) {
+        sprite.gameVelocityY = constrain((sprite.gameTarget.y - sprite.y) * 6, -700, 700);
+      }
       sprite.y += sprite.gameVelocityY * deltaSeconds;
     }
   }
@@ -245,6 +248,7 @@ function fireProjectile() {
   const projectile = createGameSprite(shotX, shotY, 22, 8);
   projectile.gameKind = 'projectile';
   projectile.gameVelocityY = verticalSpeed;
+  projectile.gameTarget = target;
   projectileSprites.push(projectile);
   shotCooldown = 0.3;
 }
@@ -325,6 +329,7 @@ function checkHits() {
     }
 
     for (const projectile of projectileSprites) {
+      if (projectile.gameDefeated) continue;
       if (boxesOverlap({
         left: projectile.x - projectile.width / 2,
         right: projectile.x + projectile.width / 2,
@@ -338,6 +343,9 @@ function checkHits() {
       }
     }
   }
+
+  removeOffscreen(enemySprites);
+  removeOffscreen(projectileSprites);
 }
 
 function getRunnerBounds() {
