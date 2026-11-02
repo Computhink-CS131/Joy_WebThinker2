@@ -10,6 +10,22 @@ const WIDTH = 960;
 const HEIGHT = 540;
 const GROUND = 426;
 const bestKey = 'neon-runner-best';
+function readBestScore() {
+  try {
+    return Number(localStorage.getItem(bestKey)) || 0;
+  } catch {
+    return 0;
+  }
+}
+
+function saveBestScore(value) {
+  try {
+    localStorage.setItem(bestKey, String(value));
+  } catch {
+    // The run remains playable when browser storage is disabled.
+  }
+}
+
 const skyline = Array.from({ length: 19 }, (_, index) => ({
   x: index * 64,
   width: 35 + (index * 19 % 28),
@@ -27,7 +43,7 @@ let obstacles = [];
 let particles = [];
 let cityOffset = 0;
 let flash = 0;
-let best = Number(localStorage.getItem(bestKey)) || 0;
+let best = readBestScore();
 let slideHeld = false;
 
 const robot = { x: 155, y: GROUND, vy: 0, grounded: true, slide: 0, runPhase: 0 };
@@ -68,7 +84,7 @@ function finishGame() {
   pauseButton.disabled = true;
   if (distance > best) {
     best = distance;
-    localStorage.setItem(bestKey, String(best));
+    saveBestScore(best);
     bestLabel.textContent = formatScore(best);
   }
   for (let index = 0; index < 18; index++) {
@@ -169,7 +185,20 @@ function update(delta) {
 
 function roundedRect(context, x, y, width, height, radius) {
   context.beginPath();
-  context.roundRect(x, y, width, height, radius);
+  if (typeof context.roundRect === 'function') {
+    context.roundRect(x, y, width, height, radius);
+    return;
+  }
+  const corner = Math.min(radius, width / 2, height / 2);
+  context.moveTo(x + corner, y);
+  context.lineTo(x + width - corner, y);
+  context.quadraticCurveTo(x + width, y, x + width, y + corner);
+  context.lineTo(x + width, y + height - corner);
+  context.quadraticCurveTo(x + width, y + height, x + width - corner, y + height);
+  context.lineTo(x + corner, y + height);
+  context.quadraticCurveTo(x, y + height, x, y + height - corner);
+  context.lineTo(x, y + corner);
+  context.quadraticCurveTo(x, y, x + corner, y);
 }
 
 function drawBackground() {
