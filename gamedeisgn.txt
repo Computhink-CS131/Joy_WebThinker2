@@ -36,9 +36,9 @@ Genre: running game
 
 Theme: future
 
-Mechanics: robot will run and defeat  
+Mechanics: robot will run and defeat enemies, jump over obstacles 
 
-Objectives: _____  
+Objectives: survive 
 
 Controls: _____  
 
