@@ -23,9 +23,9 @@ let defeatedEnemies = 0;
 
 function setup() {
   const gameCanvas = new Canvas(GAME_WIDTH, GAME_HEIGHT);
-  gameCanvas.parent('game-container');
-  gameCanvas.id('robot-runner-canvas');
-  gameCanvas.elt.setAttribute('aria-label', 'Robot Runner. Use arrow keys to move and jump, and space to shoot.');
+  gameCanvas.id = 'robot-runner-canvas';
+  gameCanvas.setAttribute('aria-label', 'Robot Runner. Use arrow keys to move and jump, and space to shoot.');
+  document.getElementById('game-container').appendChild(gameCanvas);
   world.gravity.y = 0;
   frameRate(60);
 
